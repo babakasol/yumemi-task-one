@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "yumemi-task-one"
+  "defaultProject": "yumemi-task-one",
+  "cli": {
+    "analytics": "30595ecb-c2db-49e6-94ac-55336505513b"
+  }
 }

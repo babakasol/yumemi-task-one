@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <h1> Population Graph </h1>
+</mat-toolbar>
+<section>
+    <h2> States </h2>
+</section>
+<section class="example-section">
+    <mat-checkbox class="example-margin" *ngFor="let x of states"
+        [ngModel] = "x.selected"
+        (ngModelChange)="updateAllComplete()">
+        {{x.name}} = {{x.selected}}
+    </mat-checkbox>
+    <!-- <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox> -->
+  </section>
