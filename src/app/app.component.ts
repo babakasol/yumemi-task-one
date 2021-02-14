@@ -14,8 +14,8 @@ export class AppComponent {
   ]
   allChecked: boolean = false;
 
-  updateAllComplete() {
-    this.allChecked = this.states != null && this.states.every(t => t.selected;)
+  selectionChanged(evt: any) {
+    console.log(evt);
   }
 
 }
