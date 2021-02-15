@@ -5,10 +5,8 @@
     <h2> States </h2>
 </section>
 <section class="example-section">
-    <mat-checkbox class="example-margin" *ngFor="let x of states"
-        [ngModel] = "x.selected"
-        (change)="x.selected = !x.selected">
-        {{x.name}} = {{x.selected}}
+    <mat-checkbox class="example-margin" *ngFor="let x of states.result">
+        {{x}}
     </mat-checkbox>
     <!-- <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox> -->
   </section>

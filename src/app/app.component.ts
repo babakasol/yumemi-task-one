@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api.service'
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yumemi-task-one';
-  states = [
-      { name: 'A', selected: false, disabled: false },
-      { name: 'B', selected: false, disabled: false },
-      { name: 'C', selected: false, disabled: false }
-  ]
-  allChecked: boolean = false;
+  states:any;
+  
+  constructor(private apiService: ApiService) {
+    this.callApi();
+  }
+
+  callApi() {
+    let data = this.apiService.prefectureApi();
+    console.log(data);
+    this.states = JSON.str(data);
+  }
 
   selectionChanged(evt: any) {
     console.log(evt);
