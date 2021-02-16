@@ -9,15 +9,18 @@ import { ApiService } from './api.service'
 export class AppComponent {
   title = 'yumemi-task-one';
   states:any;
+  data: any;
   
   constructor(private apiService: ApiService) {
     this.callApi();
   }
 
   callApi() {
-    let data = this.apiService.prefectureApi();
-    console.log(data);
-    this.states = JSON.str(data);
+    this.apiService.prefectureApi().subscribe( data => {
+      console.log(data);
+      this.states = data.result;
+    })
+    console.log(this.states);
   }
 
   selectionChanged(evt: any) {

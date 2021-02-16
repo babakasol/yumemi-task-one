@@ -11,9 +11,11 @@ export class ApiService {
 
   prefectureApi() {
     const headers = { 'X-API-KEY':'g2bRHUL3xlMetlbfpZGr0bA0s2MvDWomHz3zSjlA' }
-     return this.http.get<any>(this.prefecturePath, { headers }).subscribe(data => {
-        console.log(data)
-    })
+     return this.http.get<any>(this.prefecturePath, { headers })
+    //  .subscribe(data => {
+    //     console.log(data);
+    //     return data;
+    // })
     // return this.http.get<any>(this.prefecturePath, { })
     // .pipe(
     //   map((res) => {
